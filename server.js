@@ -47,6 +47,10 @@ app.use((err, req, res, next) => {
   });
 });
 
+const hbs = require('hbs');
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+
+
 // Iniciar el servidor
 app.listen(3000, () => {
   console.log('Servidor corriendo en http://localhost:3000');
